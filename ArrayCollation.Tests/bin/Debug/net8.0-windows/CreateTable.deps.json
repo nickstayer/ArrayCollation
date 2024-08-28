@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CreateTable/1.0.0": {
+        "dependencies": {
+          "ExceLib": "1.0.0",
+          "UnidecodeSharpFork": "1.0.0"
+        },
+        "runtime": {
+          "CreateTable.dll": {}
+        }
+      },
+      "ExceLib/1.0.0": {
+        "runtime": {
+          "ExceLib.dll": {}
+        }
+      },
+      "UnidecodeSharpFork/1.0.0": {
+        "runtime": {
+          "UnidecodeSharpFork.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CreateTable/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExceLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnidecodeSharpFork/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
