@@ -1,7 +1,11 @@
+using System.Text;
+
 namespace ACTests;
 
 public class Tests
 {
+    private static readonly string currentDir = AppDomain.CurrentDomain.BaseDirectory;
+    private static readonly string testDataDir = Path.GetFullPath(Path.Combine(currentDir, @"..\..\..\testdata\"));
     private static readonly Resource? _resourceCL = Consts.DATABASES.Where(r => r.Name == "Контрольный список").FirstOrDefault();
     
     [Theory]
@@ -70,5 +74,42 @@ public class Tests
         var actual = DataBasePG.GetExportResultStatement(_resourceCL.TableName, dateFormatDB, Consts.TABLE_GOSUSLUGA, "YYYY-MM-DD", "result.csv", ";", ["status", "data_zagruzki"]);
 
         Assert.Equal(expected, actual);
+    }
+
+    [Theory]
+    [MemberData(nameof(GetEncodingTestData))]
+    public void GetEncodingTest(string file, Encoding expected)
+    {
+        var actual = CsvHelper.GetEncoding(file);
+        Assert.Equal(expected, actual);
+    }
+
+    
+    public static IEnumerable<object[]> GetEncodingTestData()
+    {
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        var windows1251 = Encoding.GetEncoding("windows-1251");
+        var utf_8 = Encoding.GetEncoding("utf-8");
+
+        yield return new object[] { Path.Combine(testDataDir, "windows-1251;.csv"), windows1251 };
+        yield return new object[] { Path.Combine(testDataDir, "windows-1251;(2).csv"), windows1251 };
+        yield return new object[] { Path.Combine(testDataDir, "utf-8,.csv"), utf_8 };
+        yield return new object[] { Path.Combine(testDataDir, "utf-8,(2).csv"), utf_8 };
+    }
+
+    [Theory]
+    [MemberData(nameof(DetectSeparatorData))]
+    public void DetectSeparatorTest(string file, char expected)
+    {
+        var actual = CsvHelper.DetectSeparator(file);
+        Assert.Equal(expected, expected);
+    }
+    
+    public static IEnumerable<object[]> DetectSeparatorData()
+    {
+        yield return new object[] { Path.Combine(testDataDir, "windows-1251;.csv"), ';' };
+        yield return new object[] { Path.Combine(testDataDir, "windows-1251;(2).csv"), ';' };
+        yield return new object[] { Path.Combine(testDataDir, "utf-8,.csv"), ',' };
+        yield return new object[] { Path.Combine(testDataDir, "utf-8,(2).csv"), ',' };
     }
 }
