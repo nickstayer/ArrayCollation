@@ -368,3 +368,4 @@ nuget-packages/
 data/
 *.zip
 backup/
+.editorconfig

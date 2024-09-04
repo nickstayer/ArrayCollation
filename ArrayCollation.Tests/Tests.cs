@@ -2,7 +2,7 @@ namespace ACTests;
 
 public class Tests
 {
-    private static Resource? _resourceCL = Consts.DATABASES.Where(r => r.Name == "Контрольный список").FirstOrDefault();
+    private static readonly Resource? _resourceCL = Consts.DATABASES.Where(r => r.Name == "Контрольный список").FirstOrDefault();
     
     [Theory]
     [MemberData(nameof(GetDateFormatTestData))]
