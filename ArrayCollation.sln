@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayCollation", "ArrayCollation\ArrayCollation.csproj", "{32FD589A-6064-4B47-9E41-1167AA485B55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayCollation.Tests", "ArrayCollation.Tests\ArrayCollation.Tests.csproj", "{0BB40E29-BA01-4ECB-8F5A-DD82BF1AE190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcDataLoader", "IcDataLoader\IcDataLoader.csproj", "{99056019-B1E0-4B85-87EC-A196A3EDD38C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IcDataLoader", "IcDataLoader\IcDataLoader.csproj", "{99056019-B1E0-4B85-87EC-A196A3EDD38C}"
 EndProject
@@ -33,6 +35,14 @@ Global
 		{0BB40E29-BA01-4ECB-8F5A-DD82BF1AE190}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BB40E29-BA01-4ECB-8F5A-DD82BF1AE190}.Release|x86.ActiveCfg = Release|Any CPU
 		{0BB40E29-BA01-4ECB-8F5A-DD82BF1AE190}.Release|x86.Build.0 = Release|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|x86.Build.0 = Debug|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Release|x86.ActiveCfg = Release|Any CPU
+		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Release|x86.Build.0 = Release|Any CPU
 		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99056019-B1E0-4B85-87EC-A196A3EDD38C}.Debug|x86.ActiveCfg = Debug|Any CPU
