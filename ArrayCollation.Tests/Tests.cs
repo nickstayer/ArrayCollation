@@ -1,10 +1,8 @@
-using Microsoft.VisualBasic;
-
 namespace ACTests;
 
 public class Tests
 {
-    private static Resource? _resourceCL = Consts.DATABASES.Where(r => r.Name == "Контрольный список").FirstOrDefault();
+    private static Resource? _resourceCL = Consts.DATABASES.Where(r => r.Name == "РљРѕРЅС‚СЂРѕР»СЊРЅС‹Р№ СЃРїРёСЃРѕРє").FirstOrDefault();
     
     [Theory]
     [MemberData(nameof(GetDateFormatTestData))]
@@ -25,7 +23,6 @@ public class Tests
     [Fact]
     public void SelectDateTest()
     {
-        
         using var db = new DataBasePG();
         var actual = db.SelectDate(_resourceCL!.TableName, Consts.CONTRACT_DR_FIELD);
         Assert.True(!string.IsNullOrEmpty(actual));

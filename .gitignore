@@ -365,3 +365,6 @@ FodyWeavers.xsd
 *.patch
 
 nuget-packages/
+data/
+*.zip
+backup/
